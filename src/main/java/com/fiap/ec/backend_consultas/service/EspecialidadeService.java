@@ -17,7 +17,7 @@ public class EspecialidadeService {
     public Especialidade salvar(Especialidade especialidade) {
         return repository.save(especialidade);
     }
-    
+
     public List<Especialidade> listar() {
         return repository.findAll();
     }

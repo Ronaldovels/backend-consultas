@@ -19,7 +19,7 @@ public class EspecialidadeController {
     public Especialidade criar(@RequestBody Especialidade especialidade) {
         return service.salvar(especialidade);
     }
-    
+
     @GetMapping
     public List<Especialidade> listar() {
         return service.listar();

@@ -19,4 +19,4 @@ public class PacienteService {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Paciente não encontrado"));
     }
-}   
+}

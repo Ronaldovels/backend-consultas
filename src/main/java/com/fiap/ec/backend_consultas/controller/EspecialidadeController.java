@@ -29,4 +29,13 @@ public class EspecialidadeController {
     public Especialidade buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
+    @PutMapping("/{id}")
+    public Especialidade atualizar(@PathVariable Long id, @RequestBody Especialidade especialidade) {
+        return service.atualizar(id, especialidade);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id) {
+        service.deletar(id);
+    }
 }

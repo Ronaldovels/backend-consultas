@@ -28,6 +28,7 @@ public class Paciente {
         this.ativo = ativo;
     }
     public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
     public String getNome() { return nome; }
     public String getCpf() { return cpf; }
     public String getEmail() { return email; }
@@ -40,4 +41,6 @@ public class Paciente {
     public void setTelefone(String telefone) { this.telefone = telefone; }
     public void setDataNascimento(LocalDate dataNascimento) { this.dataNascimento = dataNascimento; }
     public void setAtivo(Boolean ativo) { this.ativo = ativo; }
+
+
 }

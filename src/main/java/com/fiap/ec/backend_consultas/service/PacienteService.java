@@ -19,6 +19,10 @@ public class PacienteService {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Paciente não encontrado"));
     }
+    public Paciente buscarPorCpf(String cpf) {
+        return repository.findByCpf(cpf)
+                .orElseThrow(() -> new RuntimeException("Paciente não encontrado"));
+    }
     public Paciente atualizar(Long id, Paciente pacienteAtualizado) {
         Paciente pacienteExistente = buscarPorId(id);
         pacienteExistente.setNome(pacienteAtualizado.getNome());

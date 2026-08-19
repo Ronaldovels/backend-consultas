@@ -11,14 +11,17 @@ public class Medico {
     @ManyToOne
     @JoinColumn(name = "especialidade_id")
     private Especialidade especialidade;
+    private Double valorConsulta;
     private Boolean ativo;
     public Medico() {
     }
-    public Medico(Long id, String nome, String crm, Especialidade especialidade, Boolean ativo) {
+    public Medico(Long id, String nome, String crm, Especialidade especialidade,
+                  Double valorConsulta, Boolean ativo) {
         this.id = id;
         this.nome = nome;
         this.crm = crm;
         this.especialidade = especialidade;
+        this.valorConsulta = valorConsulta;
         this.ativo = ativo;
     }
     public Long getId() {
@@ -32,6 +35,9 @@ public class Medico {
     }
     public Especialidade getEspecialidade() {
         return especialidade;
+    }
+    public Double getValorConsulta() {
+        return valorConsulta;
     }
     public Boolean getAtivo() {
         return ativo;
@@ -47,6 +53,9 @@ public class Medico {
     }
     public void setEspecialidade(Especialidade especialidade) {
         this.especialidade = especialidade;
+    }
+    public void setValorConsulta(Double valorConsulta) {
+        this.valorConsulta = valorConsulta;
     }
     public void setAtivo(Boolean ativo) {
         this.ativo = ativo;

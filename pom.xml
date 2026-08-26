@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fiap.ec</groupId>
-	<artifactId>backend_consultas</artifactId>
+	<artifactId>backend-consultas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>backend_consultas</name>
-	<description>BackEnd aula Java</description>
+	<name>backend-consultas</name>
+	<description>Api Marcação de Consultas</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -27,9 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-		<maven.compiler.release>17</maven.compiler.release>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

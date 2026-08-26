@@ -6,7 +6,9 @@ public class Medico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private String nome;
+    @Column(nullable = false)
     private String crm;
     @ManyToOne
     @JoinColumn(name = "especialidade_id")

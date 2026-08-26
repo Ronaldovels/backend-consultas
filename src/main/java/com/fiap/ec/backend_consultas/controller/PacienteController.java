@@ -1,4 +1,5 @@
 package com.fiap.ec.backend_consultas.controller;
+import com.fiap.ec.backend_consultas.exception.RecursoNaoEncontradoException;
 import com.fiap.ec.backend_consultas.model.Paciente;
 import com.fiap.ec.backend_consultas.service.PacienteService;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +26,8 @@ public class PacienteController {
     }
     @GetMapping("/cpf/{cpf}")
     public Paciente buscarPorCpf(@PathVariable String cpf) {
-        return service.buscarPorCpf(cpf);
+        return service.buscarPorCpf(cpf)
+                .orElseThrow(() -> new RecursoNaoEncontradoException("CPF não encontrado."));
     }
 
     @PutMapping("/{id}")

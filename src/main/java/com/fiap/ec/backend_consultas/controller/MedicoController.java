@@ -1,4 +1,5 @@
 package com.fiap.ec.backend_consultas.controller;
+import com.fiap.ec.backend_consultas.exception.RecursoNaoEncontradoException;
 import com.fiap.ec.backend_consultas.model.Medico;
 import com.fiap.ec.backend_consultas.service.MedicoService;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,8 @@ public class MedicoController {
     }
     @GetMapping("/crm/{crm}")
     public Medico buscarPorCrm(@PathVariable String crm) {
-        return service.buscarPorCrm(crm);
+        return service.buscarPorCrm(crm)
+                .orElseThrow(() -> new RecursoNaoEncontradoException("CRM não encontrado."));
     }
     @GetMapping("/especialidade/{especialidadeId}")
     public List<Medico> listarPorEspecialidade(@PathVariable Long especialidadeId) {

@@ -34,3 +34,10 @@ build/
 
 ### H2 ###
 data/*.trace.db
+
+### macOS ###
+.DS_Store
+**/.DS_Store
+
+### Banco H2 local (nao versionar - o DataLoader semeia os dados) ###
+data/

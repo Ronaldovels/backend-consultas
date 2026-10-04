@@ -1,0 +1,7 @@
+# O banco H2 local nunca vai para a imagem: na nuvem o DataLoader semeia tudo.
+data/
+target/
+.git/
+.github/
+.idea/
+.DS_Store
